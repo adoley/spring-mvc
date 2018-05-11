@@ -10,8 +10,10 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context-3.2.xsd">
 
+    <!--Dispatcher will scan this base package "com.learn.controller" for mapping request like /welcome-->
     <context:component-scan base-package="com.learn.controller" />
 
+    <!--Below bean is used for resolving views-->
     <bean
             class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix">

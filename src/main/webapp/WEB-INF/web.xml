@@ -4,14 +4,25 @@
 	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          version="2.5">
 
+    <!--reference video link
+    https://www.youtube.com/watch?v=iCQspqBpOB0&list=PLBgMUB7xGcO31B2gBmy1igpZn6LK78-CJ
+    -->
+    <!--sample urls
+     http://localhost:8080/spring/welcome
+     -->
+    <!--This is first place that is looked into whenever a client hit an URL
+     after that this page consult ${servlet-name}-servlet.xml (here in this project it is spring-web-servlet.xml)
+     for other configuration-->
+
     <display-name>Learning Spring MVC</display-name>
 
     <servlet>
-        <servlet-name>spring-web</servlet-name>
+        <servlet-name>spring-web</servlet-name> <!--name of the servlet -->
+        <!--Servlet dispatcher that is responsible for mapping controllers and views -->
         <servlet-class>
             org.springframework.web.servlet.DispatcherServlet
         </servlet-class>
-        <load-on-startup>1</load-on-startup>
+        <load-on-startup>1</load-on-startup> <!--means that this will be loaded immediately-->
     </servlet>
 
     <servlet-mapping>
