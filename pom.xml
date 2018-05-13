@@ -23,6 +23,15 @@
             <artifactId>spring-webmvc</artifactId>
             <version>${spring.version}</version>
         </dependency>
+
+        <!--dependency added so that we can use HttpServletRequest,  Response etc. I have used HttpServletRequest,  Response etc
+        in Interceptor class -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>3.0</version>
+        </dependency>
+
     </dependencies>
 
 </project>

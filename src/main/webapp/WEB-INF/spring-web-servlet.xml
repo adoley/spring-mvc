@@ -13,6 +13,20 @@
     <!--Dispatcher will scan this base package "com.learn.controller" for mapping request like /welcome-->
     <context:component-scan base-package="com.learn.controller" />
 
+    <!--Interceptor are use to intercept request. HandlerInterceptor has three methods.
+        preHandle(): It is executed before actual handler is executed.
+        postHandle(): It is executed after handler is executed.
+        afterCompletion(): It is executed after the complete request is finished.
+    -->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/*"/>
+            <bean class="com.learn.interceptor.Interceptor"></bean>
+        </mvc:interceptor>
+
+    </mvc:interceptors>
+
+
     <!--Below bean is used for resolving views-->
     <bean
             class="org.springframework.web.servlet.view.InternalResourceViewResolver">

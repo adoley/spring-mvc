@@ -2,8 +2,8 @@ package com.learn.model;
 
 public class Person {
     //command + n for getter and setter
-    public String firstName;
-    public String lastName;
+    private String firstName;
+    private String lastName;
 
     public String getFirstName() {
         return firstName;
