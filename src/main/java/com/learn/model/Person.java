@@ -1,5 +1,8 @@
 package com.learn.model;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+@JsonInclude(JsonInclude.Include.NON_EMPTY) //To display only the element t
 public class Person {
     //command + n for getter and setter
     private String firstName;

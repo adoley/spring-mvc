@@ -10,8 +10,9 @@ import java.io.IOException;
 public class Interceptor extends HandlerInterceptorAdapter{
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws ServletException, IOException {
-        response.getWriter().write("Inside interceptor");
+        //response.getWriter().write("Inside interceptor");
         //return false; //Request will never be served if false.
+
         return true;
     }
 }
